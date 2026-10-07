@@ -1,0 +1,2 @@
+ERROR: Không đọc được file workspace/data/khong-co.csv: No such file or directory
+exit_code=1

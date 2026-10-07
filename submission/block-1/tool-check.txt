@@ -1,0 +1,10 @@
+list_files('data/policies')
+  -> {"ok": true, "path": "data/policies", "entries": [{"name": "policy-before-oct.md", "path": "data/policies/policy-before-oct.md", "type": "file"}, {"name": "policy-from-oct.md", "path": "data/policies/policy-from-oct.md", "type": "file"}]}
+list_files('data/policies/policy-from-oct.md')
+  -> {"ok": false, "error": {"code": "NOT_A_DIRECTORY", "message": "Đây là file, không phải thư mục: data/policies/policy-from-oct.md. Dùng read_file để đọc file."}}
+list_files('data/khong-co')
+  -> {"ok": false, "error": {"code": "DIRECTORY_NOT_FOUND", "message": "Không tìm thấy thư mục: data/khong-co"}}
+list_files('../stage-01-files')
+  -> {"ok": false, "error": {"code": "PATH_OUTSIDE_WORKSPACE", "message": "Đường dẫn thoát ra ngoài workspace: ../stage-01-files"}}
+list_files('C:/Windows')
+  -> {"ok": false, "error": {"code": "PATH_OUTSIDE_WORKSPACE", "message": "Không chấp nhận đường dẫn tuyệt đối: C:/Windows. Dùng đường dẫn tương đối workspace."}}

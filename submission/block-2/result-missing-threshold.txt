@@ -1,0 +1,3 @@
+usage: check_csv.py [-h] --input INPUT --max-hours MAX_HOURS
+check_csv.py: error: the following arguments are required: --max-hours
+exit_code=2
